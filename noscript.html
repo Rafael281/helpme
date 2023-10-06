@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer>
+        if (window.navigator && window.navigator.userAgent) {
+          window.location.href = "index.html";
+        }
+  </script>
+  <title>Botões dos Navegadores</title>
+  <style>
+
+    .checkbox {
+      display: none;
+    }
+
+    .checkbox-label {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1d4ed8;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .checkbox:checked + .checkbox-label {
+      background-color: #1e40af;
+    }
+
+    .conteudo {
+      display: none;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .checkbox:checked + .checkbox-label + .conteudo {
+      display: block;
+    }
+    
+  </style>
+</head>
+<body>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Google Chrome</span>
+  <div class="conteudo">
+    Conteúdo para Google Chrome.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Mozilla Firefox</span>
+  <div class="conteudo">
+    Conteúdo para Mozilla Firefox.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Safari</span>
+  <div class="conteudo">
+    Conteúdo para Safari.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Microsoft Edge</span>
+  <div class="conteudo">
+    Conteúdo para Microsoft Edge.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Internet Explorer</span>
+  <div class="conteudo">
+    Conteúdo para Internet Explorer.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Opera</span>
+  <div class="conteudo">
+    Conteúdo para Opera.
+  </div>
+</label>
+
+<label>
+  <input type="checkbox" class="checkbox">
+  <span class="checkbox-label">Brave</span>
+  <div class="conteudo">
+    Conteúdo para Brave.
+  </div>
+</label>
+
+</body>
+</html>
