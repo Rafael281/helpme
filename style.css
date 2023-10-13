@@ -63,6 +63,47 @@ nav {
   width: 70%;
 }
 
+#iconeNav {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#userSvg {
+  margin-right: 20px;
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+}
+
+#userOptions {
+  position: absolute;
+  display: none;
+  list-style: none;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0;
+}
+
+#userOptions li {
+  margin-bottom: 5px;
+}
+
+#userOptions li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px 0;
+}
+
+#userOptions li a:hover {
+  color: blue;
+}
+
+
 .menu-icon {
   display: flex;
   flex-direction: column;
@@ -74,7 +115,7 @@ nav {
 }
 
 .bar {
-  width: 25px;
+  width: 30px;
   height: 3px;
   margin: 4px 0;
   background-color: #333;
@@ -184,7 +225,7 @@ nav {
 }
 
 
-svg{
+.onda{
   display: flex;
 }
 
@@ -198,6 +239,43 @@ svg{
   margin: 20px 10px;
   font-weight:  normal;
 }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .footer-section {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    color: #ff7f50;
+  }
 
 @media (max-width: 600px) {
   #conteinerBotaoCentralizado {
@@ -215,4 +293,4 @@ svg{
   #textoFooter {
     font-size: 1.1rem;
   }
-}
+    }
