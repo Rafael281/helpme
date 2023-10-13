@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="usuario.js" defer></script>
   <title>helpme</title>
 </head>
-
 <body>
 
   <nav>
@@ -21,22 +21,32 @@
 
     <ul id="links">
       <li class="link aPadrao"><a href=".html">lorem</a></li>
-      <li class="link aPadrao"><a href="test.html">login</a></li>
+      <li class="link aPadrao"><a href="login.html">login provisório</a></li>
       <li class="link aPadrao"><a href="#">lorem</a></li>
       <li class="link aPadrao"><a href="#">lorem</a></li>
     </ul>
+
     <div id="iconeNav">
+      <div id="ContUser">
+        <img src="/images/bx-user-circle.svg" alt="user" id="userSvg" onclick="toggleUserOptions()">
+        <ul id="userOptions">
+          <li><a href="#">Opção 1</a></li>
+          <li><a href="#">Opção 2</a></li>
+          <li><a href="#">Opção 3</a></li>
+        </ul>
+      </div>
+
       <div class="menu-icon" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
 
-      <div class="menu-content">
+      <div id="menu-content">
+        <ul>
+        </ul>
       </div>
 
-      <ul>
-      </ul>
     </div>
 
 
@@ -45,7 +55,7 @@
   <header class="container">
     <div id="conteudo">
       <div id="imagens">
-        <img src="/images/images.png">
+        <img src="./images/images.png">
       </div>
     </div>
   </header>
@@ -78,7 +88,7 @@
     </div>
   </section>
 
-  <svg viewBox="0 0 1000 200">
+  <svg viewBox="0 0 1000 200" class="onda">
     <path d="M0,100 
              C400,60 400,50 700,120
              S1000,0 2000,0
@@ -104,7 +114,7 @@
           </svg>
           <h4>dolor massa</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor siamet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
         <div class="card cardWave">
@@ -128,7 +138,7 @@
       </div>
     </section>
   </div>
-  <svg viewBox="0 0 1000 200">
+  <svg viewBox="0 0 1000 200" class="onda">
     <path d="M0,100 
              C400,60 400,50 700,120
              S1000,0 2000,0
@@ -137,22 +147,59 @@
              Z" fill="#0f00f0" />
   </svg>
 
-<div id="footerCont">
-  
-  <section>
-    <h2 id="textoFooter">lorem ipsum dolor massa dor lor </h2>
-  </section>
-  
-  <footer>
-    
-  </footer>
-</div>
+  <div id="footerCont">
+
+    <section>
+      <h2 id="textoFooter">lorem ipsum dolor massa dor lor </h2>
+    </section>
+
+  <footer class="footer">
+        <div class="footer-section">
+          <h2>Contato</h2>
+          <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
+          <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+        </div>
+        <div class="footer-section">
+          <h2>Redes Sociais</h2>
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>Localização</h2>
+          <p>123 Rua Principal</p>
+          <p>Cidade, Estado, CEP 12345-678</p>
+        </div>
+        
+              <div class="footer-section">
+                <h2>Contato</h2>
+                <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
+                <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+              </div>
+              <div class="footer-section">
+                <h2>Redes Sociais</h2>
+                <ul>
+                  <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                  <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                  <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h2>Localização</h2>
+                <p>123 Rua Principal</p>
+                <p>Cidade, Estado, CEP 12345-678</p>
+              </div>
+      </footer>
+  </div>
 
 
   <noscript>
     <meta http-equiv="refresh" content="0;url=noscript.html">
   </noscript>
 
+
 </body>
 
-</html>
+  </html>
