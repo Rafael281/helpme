@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Formulário helpme prototipo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-4">Título do Formulário</h1>
+      <p class="mb-4">Texto explicativo sobre o formulário.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons">
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 1
+          </label>
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 2
+          </label>
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 3
+          </label>
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 4
+          </label>
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 5
+          </label>
+          <label class="btn btn-outline-primary m-2">
+            <input type="checkbox" autocomplete="off" onclick="toggleSelection(this)"> Opção 6
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8 text-center">
+        <div id="warning" class="alert alert-danger d-none" role="alert">Selecione pelo menos uma opção.</div>
+        <button class="btn btn-primary" onclick="displaySelectedOptions()">Concluir</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <script>
+    function toggleSelection(button) {
+      const warning = document.getElementById('warning');
+      warning.classList.add('d-none');
+    }
+
+    function displaySelectedOptions() {
+      const selectedOptions = document.querySelectorAll('input[type="checkbox"]:checked');
+      const warning = document.getElementById('warning');
+      if (selectedOptions.length === 0) {
+        warning.classList.remove('d-none'); 
+      } else {
+        warning.classList.add('d-none');
+      }
+    }
+  </script>
+</body>
+</html>
