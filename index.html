@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br"></html>
-
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -8,15 +7,21 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <script src="usuario.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>helpme</title>
 </head>
+
 <body>
 
   <nav>
 
     <div id="logo">
       <a href="#" class="aPadrao">
-        <h1>logo</h1>
+        <img srcset="" src="" alt="logo">
       </a>
     </div>
 
@@ -28,13 +33,73 @@
     </ul>
 
     <div id="iconeNav">
-      <div id="ContUser">
-        <img src="./images/bx-user-circle.svg" alt="user" id="userSvg" onclick="toggleUserOptions()">
-        <ul id="userOptions">
-          <li><a href="#">Opção 1</a></li>
-          <li><a href="#">Opção 2</a></li>
-          <li><a href="#">Opção 3</a></li>
-        </ul>
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <img src="/helpme-main/images/bx-user-circle.svg" alt="usuário" id="#userSvg {
+              margin-right: 20px;
+              width: 50px;
+              height: auto;
+              cursor: pointer;
+              }">
+        </button>
+
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">
+            <span class="material-symbols-outlined">
+              radio_button_unchecked
+            </span>
+            lorem
+          </a>
+          <a href="chatbot.html">
+            <span class="material-symbols-outlined">
+              radio_button_unchecked
+            </span>
+            chatbot
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined">
+              radio_button_unchecked
+            </span>
+            lorem
+          </a>
+
+          <div class="nested-dropdown">
+            <a href="#">
+              <span class="material-symbols-outlined">
+                radio_button_unchecked
+              </span>
+              lorem
+            </a>
+
+            <div class="nested-dropdown-content">
+              <a href="#">
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked
+                </span>
+                lorem
+              </a>
+              <a href="#">
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked
+                </span>
+                lorem
+              </a>
+              <a href="#">
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked
+                </span>
+                lorem
+              </a>
+            </div>
+          </div>
+
+          <a href="#">
+            <span class="material-symbols-outlined">
+              radio_button_unchecked
+            </span>
+            lorem
+          </a>
+        </div>
       </div>
 
       <div class="menu-icon" onclick="toggleMenu()">
@@ -45,8 +110,11 @@
 
       <div id="menu-content">
         <ul>
+          <li><a href="#">loren ipsum</a></li>
+          <li><a href="#">loren ipsum</a></li>
         </ul>
       </div>
+
 
     </div>
 
@@ -62,7 +130,7 @@
   </header>
 
   <div id="conteinerBotaoCentralizado">
-    <button class="btn">lorem ipsum</button>
+    <button class="btn" id="btnSemLogin">lorem ipsum</button>
     <button class="btn">lorem ipsum</button>
   </div>
   <section class="container">
@@ -154,45 +222,45 @@
       <h2 id="textoFooter">lorem ipsum dolor massa dor lor </h2>
     </section>
 
-  <footer class="footer">
-        <div class="footer-section">
-          <h2>Contato</h2>
-          <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
-          <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-        </div>
-        <div class="footer-section">
-          <h2>Redes Sociais</h2>
-          <ul>
-            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h2>Localização</h2>
-          <p>123 Rua Principal</p>
-          <p>Cidade, Estado, CEP 12345-678</p>
-        </div>
-        
-              <div class="footer-section">
-                <h2>Contato</h2>
-                <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
-                <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-              </div>
-              <div class="footer-section">
-                <h2>Redes Sociais</h2>
-                <ul>
-                  <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                  <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                  <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h2>Localização</h2>
-                <p>123 Rua Principal</p>
-                <p>Cidade, Estado, CEP 12345-678</p>
-              </div>
-      </footer>
+    <footer class="footer">
+      <div class="footer-section">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
+        <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+      </div>
+      <div class="footer-section">
+        <h2>Redes Sociais</h2>
+        <ul>
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Localização</h2>
+        <p>123 Rua Principal</p>
+        <p>Cidade, Estado, CEP 12345-678</p>
+      </div>
+
+      <div class="footer-section">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
+        <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+      </div>
+      <div class="footer-section">
+        <h2>Redes Sociais</h2>
+        <ul>
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Localização</h2>
+        <p>123 Rua Principal</p>
+        <p>Cidade, Estado, CEP 12345-678</p>
+      </div>
+    </footer>
   </div>
 
 
@@ -200,5 +268,6 @@
     <meta http-equiv="refresh" content="0;url=noscript.html">
   </noscript>
 
-
 </body>
+
+  </html>
