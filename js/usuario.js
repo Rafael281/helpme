@@ -1,26 +1,79 @@
-      let isMenuOpen = false;
+function toggleDropdown() {
+  let dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("show-dropdown");
+}
 
-      function toggleDropdown() {
-        let dropdown = document.getElementById("myDropdown");
-        dropdown.classList.toggle("show-dropdown");
 
-        let dropdownIcon = document.getElementsByClassName("expand-icon")[0];
-        dropdownIcon.textContent = isMenuOpen ? "expand_more" : "keyboard_arrow_up";
-        isMenuOpen = !isMenuOpen;
-      }
+const botaoTopo = document.getElementById("botaoTopo");
+let isDragging = false;
+let offsetX, offsetY;
 
-      window.onclick = function(event) {
-        if (!event.target.matches(".dropdown-btn")) {
-          let dropdowns = document.getElementsByClassName("dropdown-content");
-          let dropdownIcon = document.getElementsByClassName("expand-icon")[0];
+botaoTopo.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    const rect = botaoTopo.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+});
 
-          for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show-dropdown")) {
-              openDropdown.classList.remove("show-dropdown");
-              dropdownIcon.textContent = "expand_more";
-              isMenuOpen = false;
-            }
-          }
-        }
-      };
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const left = e.clientX - offsetX;
+        const top = e.clientY - offsetY;
+
+        // Verifica os limites da tela
+        const maxWidth = window.innerWidth - botaoTopo.offsetWidth;
+        const maxHeight = window.innerHeight - botaoTopo.offsetHeight;
+
+        botaoTopo.style.left = Math.min(Math.max(0, left), maxWidth) + "px";
+        botaoTopo.style.top = Math.min(Math.max(0, top), maxHeight) + "px";
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+botaoTopo.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    const rect = botaoTopo.getBoundingClientRect();
+    offsetX = e.touches[0].clientX - rect.left;
+    offsetY = e.touches[0].clientY - rect.top;
+});
+
+document.addEventListener("touchmove", (e) => {
+    if (isDragging) {
+        const left = e.touches[0].clientX - offsetX;
+        const top = e.touches[0].clientY - offsetY;
+
+        // Verifica os limites da tela
+        const maxWidth = window.innerWidth - botaoTopo.offsetWidth;
+        const maxHeight = window.innerHeight - botaoTopo.offsetHeight;
+
+        botaoTopo.style.left = Math.min(Math.max(0, left), maxWidth) + "px";
+        botaoTopo.style.top = Math.min(Math.max(0, top), maxHeight) + "px";
+    }
+});
+
+document.addEventListener("touchend", () => {
+    isDragging = false;
+});
+
+botaoTopo.addEventListener("click", () => {
+    voltarAoTopo();
+});
+
+window.addEventListener("scroll", () => {
+    mostrarBotaoTopo();
+});
+
+function mostrarBotaoTopo() {
+    botaoTopo.style.display = "block";
+}
+
+function voltarAoTopo() {
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
