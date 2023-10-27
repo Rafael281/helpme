@@ -64,11 +64,11 @@ nav {
   display: flex;
 }
 
-  .dropdown {
+  .user {
     display: flexbox;
   }
 
-  .dropdown-btn {
+  #userBtn {
     display: flex;
     color: #4d4d4d;
     border: none;
@@ -77,7 +77,7 @@ nav {
     cursor: pointer;
   }
 
-  .dropdown-content {
+  .userConteudoPrincipal {
     display: none;
     position: absolute;
     background-color: #ffffff;
@@ -86,16 +86,16 @@ nav {
     z-index: 1;
 }
 
-  .show-dropdown {
+  .userShow {
     display: block;
   }
 
 
-  .nested-dropdown {
+  .userCont {
     position: relative; 
   }
 
-  .nested-dropdown-content {
+  .userConteudo{
     display: none;
     position: absolute;
     
@@ -104,12 +104,12 @@ nav {
     border-radius: 0 10px 10px 10px;
   }
 
-  .nested-dropdown:hover .nested-dropdown-content {
+  .userCont:hover .userConteudo {
     display: block;
   }
 
-  .dropdown-content a,
-  .nested-dropdown-content a {
+  .userConteudoPrincipal a,
+  .userConteudo a {
     color: #70747c;
     padding: 15px 16px;
     text-decoration: none;
@@ -123,19 +123,19 @@ nav {
     color: #70747c;
   }
 
-  .dropdown-content a:hover,
-  .nested-dropdown-content a:hover {
+  .userConteudoPrincipal a:hover,
+  .userConteudo a:hover {
     color: #4097fe;
     background-color: #000;
   }
 
-  .dropdown-content a:hover span,
-  .nested-dropdown-content a:hover span {
+  .userConteudoPrincipal a:hover span,
+  .userConteudo a:hover span {
     color: #4097fe;
   }
 
 
-.menu-icon {
+#menuIcone {
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -155,15 +155,15 @@ nav {
   border-radius: 2px;
 }
 
-#menu-content {
+#menuConteudo {
   display: none;
 }
 
-#menu-content.show {
+#menuConteudo.show {
   display: flex;
 }
 
-#menu-content {
+#menuConteudo {
   z-index: 99;
   flex-direction: column;
   position: fixed;
@@ -176,22 +176,28 @@ nav {
   transition: left 0.3s ease;
 }
 
-#menu-content ul, li, a {
+#menuConteudo ul, li, a {
   padding: 20px;
   text-align: center;
   text-decoration: none;
   color: #333;
 }
 
-.menu-icon.active .bar:nth-child(1) {
+#menuIcone.active{
+  position: fixed;
+  top: 20;
+  right: 0;
+}
+
+#menuIcone.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 10px);
 }
 
-.menu-icon.active .bar:nth-child(2) {
+#menuIcone.active .bar:nth-child(2) {
   opacity: 0;
 }
 
-.menu-icon.active .bar:nth-child(3) {
+#menuIcone.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -10px);
 }
 
@@ -292,7 +298,6 @@ nav {
     height: 40px;
     border-radius: 50%;
 }
-
 
 
 

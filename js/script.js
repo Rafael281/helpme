@@ -1,7 +1,7 @@
 function toggleMenu() {
-  var menu = document.getElementById('menu-content');
+  var menu = document.getElementById('menuConteudo');
   menu.classList.toggle('show');
-  var menuIcon = document.querySelector('.menu-icon');
+  var menuIcon = document.getElementById('menuIcone');
   menuIcon.classList.toggle('active');
 }
 

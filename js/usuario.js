@@ -1,26 +1,26 @@
 function toggleDropdown() {
-  let dropdown = document.getElementById("myDropdown");
-  dropdown.classList.toggle("show-dropdown");
+  let dropdown = document.getElementById("users");
+  dropdown.classList.toggle("userShow");
 }
+
 
 
 const botaoTopo = document.getElementById("botaoTopo");
 let isDragging = false;
-let offsetX, offsetY;
+let initialX, initialY;
 
 botaoTopo.addEventListener("mousedown", (e) => {
     isDragging = true;
-    const rect = botaoTopo.getBoundingClientRect();
-    offsetX = e.clientX - rect.left;
-    offsetY = e.clientY - rect.top;
+    initialX = e.clientX - botaoTopo.getBoundingClientRect().left;
+    initialY = e.clientY - botaoTopo.getBoundingClientRect().top;
+    e.preventDefault();
 });
 
 document.addEventListener("mousemove", (e) => {
     if (isDragging) {
-        const left = e.clientX - offsetX;
-        const top = e.clientY - offsetY;
+        const left = e.clientX - initialX;
+        const top = e.clientY - initialY;
 
-        // Verifica os limites da tela
         const maxWidth = window.innerWidth - botaoTopo.offsetWidth;
         const maxHeight = window.innerHeight - botaoTopo.offsetHeight;
 
@@ -35,17 +35,16 @@ document.addEventListener("mouseup", () => {
 
 botaoTopo.addEventListener("touchstart", (e) => {
     isDragging = true;
-    const rect = botaoTopo.getBoundingClientRect();
-    offsetX = e.touches[0].clientX - rect.left;
-    offsetY = e.touches[0].clientY - rect.top;
+    initialX = e.touches[0].clientX - botaoTopo.getBoundingClientRect().left;
+    initialY = e.touches[0].clientY - botaoTopo.getBoundingClientRect().top;
+    e.preventDefault();
 });
 
 document.addEventListener("touchmove", (e) => {
     if (isDragging) {
-        const left = e.touches[0].clientX - offsetX;
-        const top = e.touches[0].clientY - offsetY;
+        const left = e.touches[0].clientX - initialX;
+        const top = e.touches[0].clientY - initialY;
 
-        // Verifica os limites da tela
         const maxWidth = window.innerWidth - botaoTopo.offsetWidth;
         const maxHeight = window.innerHeight - botaoTopo.offsetHeight;
 

@@ -33,8 +33,8 @@
     </ul>
 
     <div id="iconeNav">
-      <div class="dropdown">
-        <button class="dropdown-btn" onclick="toggleDropdown()">
+      <div class="user">
+        <button id="userBtn" onclick="toggleDropdown()">
           <img src="./images/bx-user-circle.svg" alt="usuário" id="#userSvg {
               margin-right: 20px;
               width: 50px;
@@ -43,27 +43,14 @@
               }">
         </button>
 
-        <div class="dropdown-content" id="myDropdown">
-          <a href="#">
-            <span class="material-symbols-outlined">
-              radio_button_unchecked
-            </span>
-            lorem
-          </a>
+        <div class="userConteudoPrincipal" id="users">
           <a href="chatbot.html">
             <span class="material-symbols-outlined">
               radio_button_unchecked
             </span>
             chatbot
           </a>
-          <a href="#">
-            <span class="material-symbols-outlined">
-              radio_button_unchecked
-            </span>
-            lorem
-          </a>
-
-          <div class="nested-dropdown">
+          <div class="userCont">
             <a href="#">
               <span class="material-symbols-outlined">
                 radio_button_unchecked
@@ -71,7 +58,7 @@
               lorem
             </a>
 
-            <div class="nested-dropdown-content">
+            <div class="userConteudo">
               <a href="#">
                 <span class="material-symbols-outlined">
                   radio_button_unchecked
@@ -92,23 +79,16 @@
               </a>
             </div>
           </div>
-
-          <a href="#">
-            <span class="material-symbols-outlined">
-              radio_button_unchecked
-            </span>
-            lorem
-          </a>
         </div>
       </div>
 
-      <div class="menu-icon" onclick="toggleMenu()">
+      <div id="menuIcone" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
 
-      <div id="menu-content">
+      <div id="menuConteudo">
         <ul>
           <li><a href="#">loren ipsum</a></li>
           <li><a href="#">loren ipsum</a></li>
@@ -215,12 +195,12 @@
              H0 
              Z" fill="#0f00f0" />
   </svg>
-  
-<button id="botaoTopo" title="Voltar ao Topo">Topo</button>
+
+  <button id="botaoTopo" title="Voltar ao Topo">Topo</button>
 
 
 
-    
+
 
   <div id="footerCont">
 
@@ -276,4 +256,4 @@
 
 </body>
 
-  </html>
+</html>
