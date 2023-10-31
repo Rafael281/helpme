@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <title>helpme</title>
 </head>
 
@@ -81,23 +83,148 @@
           </div>
         </div>
       </div>
+      
+            <div class="header__toggle">
+              <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
 
-      <div id="menuIcone" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+  <div class="nav" id="navbar">
+    <div class="nav__container">
+      <div>
+        <a href="#" class="nav__link nav__logo">
+          <i class='bx bx-message-rounded  nav__icon'></i>
+          <span class="nav__logo-name">lorem</span>
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <h3 class="nav__subtitle">lorem</h3>
+
+            <a href="#" class="nav__link active">
+              <i class='bx bx bx-message-rounded  nav__icon'></i>
+              <span class="nav__name">loren</span>
+            </a>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-message-rounded nav__icon'></i>
+                <span class="nav__name">lorem</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bx-message-rounded nav__icon'></i>
+              <span class="nav__name">chatbot</span>
+            </a>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">lorem</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-message-rounded  nav__icon'></i>
+                <span class="nav__name">lorem</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                  <a href="#" class="nav__dropdown-item">lorem</a>
+                </div>
+              </div>
+
+            </div>
+
+  <div class="nav" id="navbar">
+    <nav class="nav__container">
+      <div>
+        <a href="#" class="nav__link nav__logo">
+          <i class='bx bxs-disc nav__icon'></i>
+          <span class="nav__logo-name">Bedimcode</span>
+        </a>
+
+        <div class="nav__list">
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Profile</h3>
+
+            <a href="#" class="nav__link active">
+              <i class='bx bx-home nav__icon'></i>
+              <span class="nav__name">Home</span>
+            </a>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-user nav__icon'></i>
+                <span class="nav__name">Profile</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">Passwords</a>
+                  <a href="#" class="nav__dropdown-item">Mail</a>
+                  <a href="#" class="nav__dropdown-item">Accounts</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bx-message-rounded nav__icon'></i>
+              <span class="nav__name">Messages</span>
+            </a>
+          </div>
+
+          <div class="nav__items">
+            <h3 class="nav__subtitle">Menu</h3>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bx-bell nav__icon'></i>
+                <span class="nav__name">Notifications</span>
+                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="#" class="nav__dropdown-item">Blocked</a>
+                  <a href="#" class="nav__dropdown-item">Silenced</a>
+                  <a href="#" class="nav__dropdown-item">Publish</a>
+                  <a href="#" class="nav__dropdown-item">Program</a>
+                </div>
+              </div>
+
+            </div>
+
+            <a href="#" class="nav__link">
+              <i class='bx bx-compass nav__icon'></i>
+              <span class="nav__name">Explore</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class='bx bx-bookmark nav__icon'></i>
+              <span class="nav__name">Saved</span>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div id="menuConteudo">
-        <ul>
-          <li><a href="#">loren ipsum</a></li>
-          <li><a href="#">loren ipsum</a></li>
-        </ul>
-      </div>
-
-
-    </div>
-
+      <a href="#" class="nav__link nav__logout">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+  </div>
 
   </nav>
 
@@ -209,43 +336,55 @@
     </section>
 
     <footer class="footer">
-      <div class="footer-section">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
-        <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-      </div>
-      <div class="footer-section">
-        <h2>Redes Sociais</h2>
-        <ul>
-          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h2>Localização</h2>
-        <p>123 Rua Principal</p>
-        <p>Cidade, Estado, CEP 12345-678</p>
-      </div>
-
-      <div class="footer-section">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:contato@seudomínio.com">contato@seudomínio.com</a></p>
-        <p>Telefone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-      </div>
-      <div class="footer-section">
-        <h2>Redes Sociais</h2>
-        <ul>
-          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h2>Localização</h2>
-        <p>123 Rua Principal</p>
-        <p>Cidade, Estado, CEP 12345-678</p>
-      </div>
+            <div class="footerRow">
+              <div class="footerCol">
+                <h4>lorem ipsum</h4>
+                <ul class="links">
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                </ul>
+              </div>
+      
+              <div class="footerCol">
+                <h4>lorem ipsum</h4>
+                <ul class="links">
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                </ul>
+              </div>
+      
+              <div class="footerCol">
+                <h4>lorem ipsum</h4>
+                <ul class="links">
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                  <li><a href="#">lorem</a></li>
+                </ul>
+              </div>
+      
+              <div class="footerCol">
+                <h4>lorem ipsum</h4>
+                <p>
+                  lorem impsum forem massa dolor dor lor forem dolor olor
+                </p>
+                <div id="iconesFooter">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+            </div>
     </footer>
   </div>
 
