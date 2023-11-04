@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
-  <script src="js/usuario.js" defer></script>
+  <script src="js/usuario.js" defer></script>  
+  <script src="js/botaoSubir.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <title>helpme</title>
 </head>
 
@@ -22,8 +24,9 @@
   <nav>
 
     <div id="logo">
+      <h2>helpme</h2>
       <a href="#" class="aPadrao">
-        <img srcset="" src="images/logo.png" alt="logo" style="width: 50px;">
+        <img src="images/logo.png" alt="logo" style="width: 50px;">
       </a>
     </div>
 
@@ -35,196 +38,130 @@
     </ul>
 
     <div id="iconeNav">
-      <div class="user">
-        <button id="userBtn" onclick="toggleDropdown()">
-          <img src="./images/bx-user-circle.svg" alt="usuário" id="#userSvg {
-              margin-right: 20px;
-              width: 50px;
-              height: auto;
-              cursor: pointer;
-              }">
-        </button>
+      <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+      </div>
+      <div class="action">
+        <div class="profile" onclick="menuToggle();">
+          <img src="/images/bx-user-circle.svg" alt="">
+        </div>
 
-        <div class="userConteudoPrincipal" id="users">
-          <a href="chatbot.html">
-            <span class="material-symbols-outlined">
-              radio_button_unchecked
-            </span>
-            chatbot
-          </a>
-          <div class="userCont">
-            <a href="#">
-              <span class="material-symbols-outlined">
-                radio_button_unchecked
-              </span>
-              lorem
-            </a>
-
-            <div class="userConteudo">
-              <a href="#">
-                <span class="material-symbols-outlined">
-                  radio_button_unchecked
-                </span>
-                lorem
-              </a>
-              <a href="#">
-                <span class="material-symbols-outlined">
-                  radio_button_unchecked
-                </span>
-                lorem
-              </a>
-              <a href="#">
-                <span class="material-symbols-outlined">
-                  radio_button_unchecked
-                </span>
-                lorem
-              </a>
+        <div class="menu">
+          <h3>
+            User Account
+            <div>
+              Operational Team
             </div>
-          </div>
+          </h3>
+          <ul>
+            <li>
+              <span class="material-icons icons-size">person</span>
+              <a href="#">My Profile</a>
+            </li>
+            <li>
+              <span class="material-icons icons-size">mode</span>
+              <a href="#">Edit Account</a>
+            </li>
+            <li>
+              <span class="material-icons icons-size">insert_comment</span>
+              <a href="#">Comments</a>
+            </li>
+            <li>
+              <span class="material-icons icons-size">monetization_on</span>
+              <a href="#">Budget</a>
+            </li>
+            <li>
+              <span class="material-icons icons-size">account_balance</span>
+              <a href="#">Finance</a>
+            </li>
+            <li>
+              <span class="material-icons icons-size">account_balance_wallet</span>
+              <a href="#">Wallet</a>
+            </li>
+          </ul>
         </div>
       </div>
-      
-            <div class="header__toggle">
-              <i class='bx bx-menu' id="header-toggle"></i>
-            </div>
 
-  <div class="nav" id="navbar">
-    <div class="nav__container">
-      <div>
-        <a href="#" class="nav__link nav__logo">
-          <i class='bx bx-message-rounded  nav__icon'></i>
-          <span class="nav__logo-name">lorem</span>
-        </a>
 
-        <div class="nav__list">
-          <div class="nav__items">
-            <h3 class="nav__subtitle">lorem</h3>
+    </div>
 
-            <a href="#" class="nav__link active">
-              <i class='bx bx bx-message-rounded  nav__icon'></i>
-              <span class="nav__name">loren</span>
-            </a>
+    <div class="nav" id="navbar">
+      <nav class="nav__container">
+        <div>
+          <a href="#" class="nav__link nav__logo">
+            <i class='bx bxs-disc nav__icon'></i>
+            <span class="nav__logo-name">Bedimcode</span>
+          </a>
 
-            <div class="nav__dropdown">
+          <div class="nav__list">
+            <div class="nav__items">
+              <h3 class="nav__subtitle">Profile</h3>
+
+              <a href="#" class="nav__link active">
+                <i class='bx bx-home nav__icon'></i>
+                <span class="nav__name">Home</span>
+              </a>
+
+              <div class="nav__dropdown">
+                <a href="#" class="nav__link">
+                  <i class='bx bx-user nav__icon'></i>
+                  <span class="nav__name">Profile</span>
+                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                </a>
+
+                <div class="nav__dropdown-collapse">
+                  <div class="nav__dropdown-content">
+                    <a href="#" class="nav__dropdown-item">Passwords</a>
+                    <a href="#" class="nav__dropdown-item">Mail</a>
+                    <a href="#" class="nav__dropdown-item">Accounts</a>
+                  </div>
+                </div>
+              </div>
+
               <a href="#" class="nav__link">
                 <i class='bx bx-message-rounded nav__icon'></i>
-                <span class="nav__name">lorem</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                <span class="nav__name">Messages</span>
               </a>
-
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                </div>
-              </div>
             </div>
 
-            <a href="#" class="nav__link">
-              <i class='bx bx-message-rounded nav__icon'></i>
-              <span class="nav__name">chatbot</span>
-            </a>
-          </div>
+            <div class="nav__items">
+              <h3 class="nav__subtitle">Menu</h3>
 
-          <div class="nav__items">
-            <h3 class="nav__subtitle">lorem</h3>
+              <div class="nav__dropdown">
+                <a href="#" class="nav__link">
+                  <i class='bx bx-bell nav__icon'></i>
+                  <span class="nav__name">Notifications</span>
+                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                </a>
 
-            <div class="nav__dropdown">
+                <div class="nav__dropdown-collapse">
+                  <div class="nav__dropdown-content">
+                    <a href="#" class="nav__dropdown-item">Blocked</a>
+                    <a href="#" class="nav__dropdown-item">Silenced</a>
+                    <a href="#" class="nav__dropdown-item">Publish</a>
+                    <a href="#" class="nav__dropdown-item">Program</a>
+                  </div>
+                </div>
+
+              </div>
+
               <a href="#" class="nav__link">
-                <i class='bx bx-message-rounded  nav__icon'></i>
-                <span class="nav__name">lorem</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                <i class='bx bx-compass nav__icon'></i>
+                <span class="nav__name">Explore</span>
               </a>
-
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                  <a href="#" class="nav__dropdown-item">lorem</a>
-                </div>
-              </div>
-
-            </div>
-
-  <div class="nav" id="navbar">
-    <nav class="nav__container">
-      <div>
-        <a href="#" class="nav__link nav__logo">
-          <i class='bx bxs-disc nav__icon'></i>
-          <span class="nav__logo-name">Bedimcode</span>
-        </a>
-
-        <div class="nav__list">
-          <div class="nav__items">
-            <h3 class="nav__subtitle">Profile</h3>
-
-            <a href="#" class="nav__link active">
-              <i class='bx bx-home nav__icon'></i>
-              <span class="nav__name">Home</span>
-            </a>
-
-            <div class="nav__dropdown">
               <a href="#" class="nav__link">
-                <i class='bx bx-user nav__icon'></i>
-                <span class="nav__name">Profile</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                <i class='bx bx-bookmark nav__icon'></i>
+                <span class="nav__name">Saved</span>
               </a>
-
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">Passwords</a>
-                  <a href="#" class="nav__dropdown-item">Mail</a>
-                  <a href="#" class="nav__dropdown-item">Accounts</a>
-                </div>
-              </div>
             </div>
-
-            <a href="#" class="nav__link">
-              <i class='bx bx-message-rounded nav__icon'></i>
-              <span class="nav__name">Messages</span>
-            </a>
-          </div>
-
-          <div class="nav__items">
-            <h3 class="nav__subtitle">Menu</h3>
-
-            <div class="nav__dropdown">
-              <a href="#" class="nav__link">
-                <i class='bx bx-bell nav__icon'></i>
-                <span class="nav__name">Notifications</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-              </a>
-
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">Blocked</a>
-                  <a href="#" class="nav__dropdown-item">Silenced</a>
-                  <a href="#" class="nav__dropdown-item">Publish</a>
-                  <a href="#" class="nav__dropdown-item">Program</a>
-                </div>
-              </div>
-
-            </div>
-
-            <a href="#" class="nav__link">
-              <i class='bx bx-compass nav__icon'></i>
-              <span class="nav__name">Explore</span>
-            </a>
-            <a href="#" class="nav__link">
-              <i class='bx bx-bookmark nav__icon'></i>
-              <span class="nav__name">Saved</span>
-            </a>
           </div>
         </div>
-      </div>
 
-      <a href="#" class="nav__link nav__logout">
-        <i class='bx bx-log-out nav__icon'></i>
-        <span class="nav__name">Log Out</span>
-      </a>
-  </div>
+        <a href="#" class="nav__link nav__logout">
+          <i class='bx bx-log-out nav__icon'></i>
+          <span class="nav__name">Log Out</span>
+        </a>
+    </div>
 
   </nav>
 
@@ -336,55 +273,55 @@
     </section>
 
     <footer class="footer">
-            <div class="footerRow">
-              <div class="footerCol">
-                <h4>lorem ipsum</h4>
-                <ul class="links">
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                </ul>
-              </div>
-      
-              <div class="footerCol">
-                <h4>lorem ipsum</h4>
-                <ul class="links">
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                </ul>
-              </div>
-      
-              <div class="footerCol">
-                <h4>lorem ipsum</h4>
-                <ul class="links">
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                </ul>
-              </div>
-      
-              <div class="footerCol">
-                <h4>lorem ipsum</h4>
-                <p>
-                  lorem impsum forem massa dolor dor lor forem dolor olor
-                </p>
-                <div id="iconesFooter">
-                  <i class="fa-brands fa-facebook-f"></i>
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-linkedin"></i>
-                  <i class="fa-brands fa-github"></i>
-                </div>
-              </div>
-            </div>
+      <div class="footerRow">
+        <div class="footerCol">
+          <h4>lorem ipsum</h4>
+          <ul class="links">
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+
+        <div class="footerCol">
+          <h4>lorem ipsum</h4>
+          <ul class="links">
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+
+        <div class="footerCol">
+          <h4>lorem ipsum</h4>
+          <ul class="links">
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+
+        <div class="footerCol">
+          <h4>lorem ipsum</h4>
+          <p>
+            lorem impsum forem massa dolor dor lor forem dolor olor
+          </p>
+          <div id="iconesFooter">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 
@@ -392,7 +329,9 @@
   <noscript>
     <meta http-equiv="refresh" content="0;url=noscript.html">
   </noscript>
-
+  <script>
+    
+  </script>
 </body>
 
 </html>
