@@ -8,6 +8,7 @@
   <script src="js/script.js" defer></script>
   <script src="js/usuario.js" defer></script>  
   <script src="js/botaoSubir.js" defer></script>
+  <script src="js/slide.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -165,13 +166,21 @@
 
   </nav>
 
-  <header class="container">
-    <div id="conteudo">
-      <div id="imagens">
-        <img src="./images/images.png">
-      </div>
-    </div>
-  </header>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="/images/face.png" alt="Imagem 1"></div>
+    <div class="slide"><img src="/images/logo.png" alt="Imagem 2"></div>
+    <div class="slide"><img src="/images/micro.png" alt="Imagem 3"></div>
+  </div>
+  <div class="slider-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+
 
   <div id="conteinerBotaoCentralizado">
     <button class="btn" id="btnSemLogin">lorem ipsum</button>
