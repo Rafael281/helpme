@@ -1,5 +1,5 @@
 const slider = document.querySelector('.slider');
-const dots = document.querySelectorAll('.dot');
+const dots = document.querySelectorAll('.ponto');
 let currentIndex = 0;
 let startX = 0;
 let isMoving = false;
