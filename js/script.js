@@ -1,25 +1,42 @@
+const body = document.querySelector("body");
+const sidebar = document.querySelector(".sidebar");
+const submenuItems = document.querySelectorAll(".itensSubmenu");
+const sidebarOpen = document.querySelector("#sidebarOpen");
+const sidebarClose = document.querySelector(".CollapseSidebar");
+const sidebarExpand = document.querySelector(".sidebarEspandido");
+sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
 
-const mostrarMenu = (headerToggle, navbarId) => {
-    const toggleBtn = document.getElementById(headerToggle),
-    nav = document.getElementById(navbarId)
-    
-    // Verificar se as variáveis existem
-    if (headerToggle && navbarId) {
-        toggleBtn.addEventListener('click', () => {
-            // Adicionamos a classe show-menu ao elemento div com a classe menu
-            nav.classList.toggle('mostrarMenu')
-            // Alterar o ícone
-            toggleBtn.classList.toggle('bx-x')
-        })
-    }
+sidebarClose.addEventListener("click", () => {
+  sidebar.classList.add("close", "hoverable");
+});
+sidebarExpand.addEventListener("click", () => {
+  sidebar.classList.remove("close", "hoverable");
+});
+
+sidebar.addEventListener("mouseenter", () => {
+  if (sidebar.classList.contains("hoverable")) {
+    sidebar.classList.remove("close");
+  }
+});
+sidebar.addEventListener("mouseleave", () => {
+  if (sidebar.classList.contains("hoverable")) {
+    sidebar.classList.add("close");
+  }
+});
+
+submenuItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("submenuShow");
+    submenuItems.forEach((item2, index2) => {
+      if (index !== index2) {
+        item2.classList.remove("submenuShow");
+      }
+    });
+  });
+});
+
+if (window.innerWidth < 768) {
+  sidebar.classList.add("close");
+} else {
+  sidebar.classList.remove("close");
 }
-mostrarMenu('header-toggle', 'navbar')
-
-const linkCor = document.querySelectorAll('.menuLink')
-
-function corLink() {
-    linkCor.forEach(l => l.classList.remove('ativo'))
-    this.classList.add('ativo')
-}
-
-linkCor.forEach(l => l.addEventListener('click', corLink))
