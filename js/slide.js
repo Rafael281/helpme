@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
   const slider = document.querySelector('.slider');
   const dots = document.querySelectorAll('.ponto');
   let currentIndex = 0;
@@ -67,6 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  setInterval(nextSlide, 8000); // Altera a imagem a cada 8 segundos
+  setInterval(nextSlide, 8000);
   goToSlide(currentIndex);
-});
+
