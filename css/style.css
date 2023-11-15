@@ -449,6 +449,9 @@ img {
   margin: 0 5px;
 }
 
+.ponto.ativo {
+  background-color: #23AC6E;
+}
 
 #cardCont {
   display: grid;
