@@ -35,7 +35,7 @@ submenuItems.forEach((item, index) => {
   });
 });
 
-if (window.innerWidth < 768) {
+if (window.innerWidth < 999999) {
   sidebar.classList.add("close");
 } else {
   sidebar.classList.remove("close");

@@ -266,14 +266,14 @@ nav {
   color: var(--grey-color);
   white-space: nowrap;
 }
-.dahsboardMenu::before {
-  content: "Dashboard";
+.impsumMenu::before {
+  content: "impsum";
 }
-.editorMenu::before {
-  content: "Editor";
+.loremMenu::before {
+  content: "lorem";
 }
-.settingMenu::before {
-  content: "Setting";
+.massaMenu::before {
+  content: "massa";
 }
 
 .itensMenu {
@@ -449,6 +449,9 @@ img {
   margin: 0 5px;
 }
 
+.ponto.ativo {
+  background-color: #23AC6E;
+}
 
 #cardCont {
   display: grid;
